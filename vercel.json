@@ -1,13 +1,16 @@
 {
-    "buildCommand": "pnpm build",
+    "framework": "vite",
+    "buildCommand": "pnpm run build",
     "outputDirectory": "dist",
-    "installCommand": "pnpm install",
-    "framework": null,
-    "functions": {},
+    "installCommand": "npm install",
+    "devCommand": "npm run dev",
     "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
-  }
+        {
+            "source": "/(.*)",
+            "destination": "/index.html"
+        }
+    ],
+    "env": {
+        "NODE_ENV": "production"
+    }
+}
